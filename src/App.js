@@ -291,7 +291,7 @@ function App() {
                             <label htmlFor="savonds">
                                 <input
                                     type="radio" value="'s avonds" id="savonds"
-                                    onClick={(e) =>
+                                    onClick={() =>
                                         setState(prevState => {
                                             return {
                                                 ...prevState,
@@ -318,7 +318,7 @@ function App() {
                             </label>
                         </div>
                         <label htmlFor="checkbox">
-                            <input type="checkbox" name="voorwaarden" onChange={(e) =>
+                            <input type="checkbox" name="voorwaarden" onChange={() =>
                                 setState(prevState => {
                                     return {
                                         ...prevState,
