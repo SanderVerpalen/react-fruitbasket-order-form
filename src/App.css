@@ -1,0 +1,19 @@
+input {
+    margin: 10px;
+}
+fieldset{
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+}
+
+select {
+    max-width: 120px;
+    margin-top: 20px;
+}
+
+.selectorBox {
+    display: flex;
+    flex-direction: column;
+}
+
