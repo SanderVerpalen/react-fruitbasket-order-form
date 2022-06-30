@@ -18,13 +18,13 @@ function App() {
         bananaCounter: 0,
         appleCounter: 0,
         kiwiCounter: 0,
-        formFirstName: '',
-        formLastName: '',
+        formFirstName: " ",
+        formLastName: " ",
         formAge: 0,
-        formPostalCode: '',
+        formPostalCode: " ",
         formFrequency: "Iedere week",
         formTime: "Overdag",
-        formComments: '',
+        formComments: " ",
         checkBox: false
     })
 
@@ -89,7 +89,7 @@ function App() {
                         buttonClassName="counterButton"
                         buttonType="button"
                         clickHandlerFunctionMinus={() => {
-                            if (strawberryCounter > 0) setState(prevState => {
+                            strawberryCounter > 0 && setState(prevState => {
                                 return {
                                     ...prevState,
                                     strawberryCounter: prevState.strawberryCounter - 1
@@ -117,7 +117,7 @@ function App() {
                         buttonClassName="counterButton"
                         buttonType="button"
                         clickHandlerFunctionMinus={() => {
-                            if (bananaCounter > 0) setState(prevState => {
+                            bananaCounter > 0 && setState(prevState => {
                                 return {
                                     ...prevState,
                                     bananaCounter: prevState.bananaCounter - 1
@@ -145,12 +145,13 @@ function App() {
                         buttonClassName="counterButton"
                         buttonType="button"
                         clickHandlerFunctionMinus={() => {
-                            if (appleCounter > 0) setState(prevState => {
-                                return {
-                                    ...prevState,
-                                    appleCounter: prevState.appleCounter - 1
-                                }
-                            })
+                             appleCounter > 0 &&
+                                setState(prevState => {
+                                    return {
+                                        ...prevState,
+                                        appleCounter: prevState.appleCounter - 1
+                                    }
+                                })
                         }}
                         clickHandlerFunctionPlus={() =>
                             setState(prevState => {
@@ -173,7 +174,7 @@ function App() {
                         buttonClassName="counterButton"
                         buttonType="button"
                         clickHandlerFunctionMinus={() => {
-                            if (kiwiCounter > 0) setState(prevState => {
+                             kiwiCounter > 0 && setState(prevState => {
                                 return {
                                     ...prevState,
                                     kiwiCounter: prevState.kiwiCounter - 1
